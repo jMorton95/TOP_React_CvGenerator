@@ -2,12 +2,6 @@ import React, { Component } from "react"
 import './App.css';
 import Main from "./components/main/main.js";
 
-const personalInputs = {
-  domClass: 'firstName',
-  type: 'text',
-  placeholder: 'First Name',
-  value: ''
-}
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +16,7 @@ class App extends Component {
           <h1>CV Generator</h1>
         </header>
 
-      <Main {...personalInputs}/>
+      <Main/>
 
         <footer role="footer"> 
 

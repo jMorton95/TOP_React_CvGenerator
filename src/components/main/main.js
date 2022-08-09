@@ -1,4 +1,7 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import Personal from "./personal/personal.js";
+
+
 
 class Main extends Component {
     constructor(props) {
@@ -6,12 +9,10 @@ class Main extends Component {
     }
 
     render() {
-        const { domClass, type, placeholder, value } = this.props;
+
         return (
             <main role="main">
-                <div className="personal">
-                    <input className={domClass}></input>
-                </div>
+                <Personal></Personal>
                 <div className="work"></div>
                 <div className="education"></div>
             </main>
