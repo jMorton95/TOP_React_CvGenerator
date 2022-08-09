@@ -8,16 +8,20 @@ class Personal extends Component {
     
     render() {
 
-        const firstName = ['firstName','text','First Name', ''];
-        const lastName = ['lastName','text','Last Name', ''];
+        const attributes = {
+            firstName: ['firstName','text','First Name', ''],
+            lastName: ['lastName','text','Last Name', ''],
+            address: ['address', 'text', 'Address', '']
+        }
         
+        const inputList = Object.keys(attributes).map(item => (
+            NewInput(attributes[item])
+        ));
+
         return (
 
             <div className="personal">
-                {NewInput(firstName)}
-                {NewInput(lastName)}
-               
-
+                {inputList}
             </div>
         );
     };

@@ -17,15 +17,15 @@ function InputPropGenerator(
 
 const NewInput = (propArr) => {
 
-    const props = InputPropGenerator(...propArr);
+    const {domClass, type, placeholder, defaultValue} = InputPropGenerator(...propArr);
     
 
     return (
         <input
-        className={props.domClass}
-        type={props.type}
-        placeholder={props.placeholder}
-        defaultValue={props.defaultValue}
+        className={domClass}
+        type={type}
+        placeholder={placeholder}
+        defaultValue={defaultValue}
         ></input>
     )
 }
