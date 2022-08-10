@@ -21,12 +21,7 @@ const NewInput = (propArr) => {
     
 
     return (
-        <input
-        className={domClass}
-        type={type}
-        placeholder={placeholder}
-        defaultValue={defaultValue}
-        ></input>
+        <input className={domClass} type={type} placeholder={placeholder} defaultValue={defaultValue}></input>
     )
 }
 
