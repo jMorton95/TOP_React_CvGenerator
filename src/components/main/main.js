@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Personal from "./personal/personal.js";
+import Employment from "./employment/employment.js";
 
 
 
@@ -13,7 +14,7 @@ class Main extends Component {
         return (
             <main role="main">
                 <Personal></Personal>
-                <div className="work"></div>
+                <Employment></Employment>
                 <div className="education"></div>
             </main>
         );

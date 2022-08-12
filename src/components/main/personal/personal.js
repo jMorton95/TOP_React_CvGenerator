@@ -21,7 +21,7 @@ class Personal extends Component {
             NewInput(attributes[item])
         ));
 
-        function submitEvent(e) {
+        const formSubmit = e => {
             e.preventDefault();
         }
 
@@ -29,13 +29,11 @@ class Personal extends Component {
 
         
         return (
-
             <div className="personal">
                 <h3 className="personalHeading">Personal Information</h3>
-                <form className="inputList">
+                <form className="inputList" onSubmit={formSubmit}>
                     {inputList}
                     {SubmitButton}
-                    {NewButton(['submitButton', 'submit', 'Submit'])}
                 </form>
                 
             </div>

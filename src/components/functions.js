@@ -1,42 +1,34 @@
-function InputPropGenerator(
+import {v4 as uuidv4} from 'uuid';
+
+function PropGenerator(
     domClass,
     type,
-    placeholder
+    value,
+    key
   ) {
     return {
       domClass: domClass,
       type: type,
-      placeholder: placeholder
+      value: value,
+      key: key
     };
 };
 
 const NewInput = propArr => {
 
-    const {domClass, type, placeholder} = InputPropGenerator(...propArr);
-  
+    const {domClass, type, value, key} = PropGenerator(...propArr, uuidv4());
+      
     return (
-        <input className={domClass} type={type} placeholder={placeholder}></input>
+        <input className={domClass} type={type} placeholder={value} key={key}></input>
     )
-}
-
-function ButtonPropGenerator (
-  domClass,
-  type, 
-  text
-  ) {
-  return {
-    domClass: domClass,
-    type: type,
-    text: text
-  }
 }
 
 const NewButton = propArr => {
 
-  const {domClass, type, text} = ButtonPropGenerator(...propArr)
+  const {domClass, type, value, key} = PropGenerator(...propArr, uuidv4());
 
   return (
-    <button className={domClass} type={type}>{text}</button>
+    <button className={domClass} type={type}>{value}</button>
   )
 }
 
